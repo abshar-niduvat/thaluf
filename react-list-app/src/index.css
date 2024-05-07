@@ -11,3 +11,112 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+.alignItemRight{
+  text-align:right;
+  padding-right: 10px;
+}
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  margin: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  animation: fade-out 0.3s ease-in-out forwards; /* Animation definition goes here */
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px); /* Add a slight translation for visual effect */
+  }
+}
+
+body {
+  font-family: sans-serif;
+  margin: 30px;
+}
+
+h1 {
+  text-align: center;
+  color: #34495e;
+}
+
+#search-input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#search-input:focus {
+  outline: none;
+  border: 1px solid #888;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table thead th {
+  background-color: #e0ebef;
+  padding: 10px;
+  color: #34495e;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.data-table tbody td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.data-table button {
+  background-color: #428bca;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Media Queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
+  .data-table {
+    display: block;
+    overflow-x: auto;
+  }
+  /* .data-table thead {
+    display: none;
+  } */
+  /* .data-table tr {
+    display: block;
+    margin-bottom: 15px;
+  }*/
+  .data-table tr td:first-child {
+    font-weight: bold;
+    width: auto;
+    padding: 10px 0;
+  } 
+  .data-table tr td:not(:first-child) {
+    padding: 0 10px;
+  }
+  
+}
